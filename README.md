@@ -13,7 +13,7 @@ First you should import data into your database and run [FactorBase](https://git
 + `javac -cp ".:./lib/*" BIF_Generator.java`  
 + `java -cp ".:./lib/*" BIF_Generator`  
   
-###Show results in GUI    
+##Show results in GUI (Visualization)    
 You'll need a tool provided by UBC.   
 [Download tool (.jar format)](http://www.aispace.org/bayes/version5.1.10/bayes.jar)    
 [Download tool (.exe format)](http://www.aispace.org/bayes/version5.1.10/bayes.exe)    

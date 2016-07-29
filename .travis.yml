@@ -4,9 +4,8 @@ addons:
 jdk:
   - oraclejdk8
 before_script:
-  - mkdir bayesbase
-  - cd bayesbase
   - git clone https://github.com/sfu-cl-lab/FactorBase.git
+  - cd FactorBase
   - mysql -e "use mysql; update user set password=PASSWORD('123456') where User='root'; flush privileges;" -uroot
   - mysql -uroot -p123456 < testsql/unielwin_course.sql
   - mysql -uroot -p123456 < testsql/unielwin_prof.sql
@@ -19,6 +18,8 @@ before_script:
   - ls -lh
   - cd ../..
   - cp jar/BIF_Generator.jar ./BIF_Generator.jar
+  - ls -lh
+  - rm -rf FactorBase
 script:
   - javac -cp ".:./lib/*" BIF_Generator.java
   - java -cp ".:./lib/*" BIF_Generator

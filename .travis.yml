@@ -1,0 +1,34 @@
+language: java
+addons:
+  mariadb: '10.0'
+jdk:
+  - oraclejdk8
+before_script:
+  - mkdir bayesbase
+  - cd bayesbase
+  - git clone https://github.com/sfu-cl-lab/FactorBase.git
+  - mysql -e "use mysql; update user set password=PASSWORD('123456') where User='root'; flush privileges;" -uroot
+  - mysql -uroot -p123456 < testsql/unielwin_course.sql
+  - mysql -uroot -p123456 < testsql/unielwin_prof.sql
+  - mysql -uroot -p123456 < testsql/unielwin_RA.sql
+  - mysql -uroot -p123456 < testsql/unielwin_registration.sql
+  - mysql -uroot -p123456 < testsql/unielwin_student.sql
+  - cd jar
+  - java -jar FactorBase.jar > jar.txt
+  - tail jar.txt
+  - ls -lh
+  - cd ../..
+  - cp jar/BIF_Generator.jar ./BIF_Generator.jar
+script:
+  - javac -cp ".:./lib/*" BIF_Generator.java
+  - java -cp ".:./lib/*" BIF_Generator
+  - ls -lh
+  - cat *.xml
+  - echo 'Now, try .jar file.'
+  - rm -f *.xml
+  - java -jar BIF_Generator.jar
+  - cat *.xml
+after_script:
+  - mysql -e "show databases;" -uroot -p123456
+  - mysql -e "use unielwin_BN; show tables;" -uroot -p123456
+  - mysql -e "use unielwin_CT; show tables;" -uroot -p123456

@@ -45,16 +45,15 @@ Output: An .xml file in BIF format.
 We have tested the BIF_Generator with the AIspace tool from UBC.  
 1. Download and run the tool
 
-  [Download tool (.jar format)](http://www.aispace.org/bayes/version5.1.10/bayes.jar) and  
-  Run by `java -jar bayes.jar`
+   [Download tool (.jar format)](http://www.aispace.org/bayes/version5.1.10/bayes.jar) and  
+   Run by `java -jar bayes.jar`
   
-  OR 
+    OR 
   
-  [Download tool (.exe format)](http://www.aispace.org/bayes/version5.1.10/bayes.exe) and   
-  Run the .exe file
+   [Download tool (.exe format)](http://www.aispace.org/bayes/version5.1.10/bayes.exe) and   
+   Run the .exe file
 
 2. Go to `File > Load from File` 
-
    and select the `Bif_<YOURDATABASENAME>.xml` in the folder `Bif_Generator`.
 
 You will obtain the result shown in the Image ![BNinAIspace](/images/bnaispace.png).

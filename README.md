@@ -56,7 +56,7 @@ We have tested the BIF_Generator with the AIspace tool from UBC.
 2. Go to `File > Load from File` 
    and select the `Bif_<YOURDATABASENAME>.xml` in the folder `Bif_Generator`.
 
-You will obtain the result shown in the Image ![BNinAIspace](/images/bnaispace.png).
+You will obtain a result like that shown in the Image ![BNinAIspace](/images/bnaispace.png).
 
   
 <!---### Compile & Run (Alternative way to run BIF_Generator)    

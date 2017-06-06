@@ -11,10 +11,8 @@ Output: An .xml file in BIF format.
 
 ## How to Use 
 
-
+***You have used BIF_Generator if you run the FactorBase on your relational database. The Bif_'YOURDATABASENAME'.xml is created in FactorBase/jar folder. If you wish to run the BIF_Generator separately, please follow these steps.***
 1. Import data into your database and run [FactorBase](https://github.com/sfu-cl-lab/FactorBase). 
-
-    ***You have already done step 1 if you have been following FactorBase README***
 
 2. Clone the BIF_Generator repository by 
 

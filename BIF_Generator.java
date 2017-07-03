@@ -1,3 +1,5 @@
+/*assumes a PathBayesNet table. Seems to output another table Final_Path_Bayes_Net -like the table we want for final output
+
 /* Feb 7th 2014, zqian;
         //Make sure each node appear as a child
         // <child,''>, <child,parent>      
